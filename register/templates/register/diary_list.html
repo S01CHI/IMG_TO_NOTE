@@ -1,0 +1,54 @@
+{% extends 'register/base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ heading }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <link href="{% static 'register/style/style.css'%}" rel="stylesheet">
+
+
+    <section id="diary-list" class="container">
+        <h1 class="section-title">{{ heading }}</h1>
+
+        <form action="" method="get" >
+            <p>タイトルやコンテンツを入力して検索：</p>
+            <input name="query" value="{{ request.GET.query }}" type="text">
+            <button type="submit" class="search">検索する</button>
+        </form>
+        <article class="list" >
+        <a href="create">
+            <h2 style="color:black">Create</h2>
+            <p style="color:black">新しいノートに書き残す</p>
+        </a>
+        </article>
+        {% for diary in object_list %}
+            <article class="list" class="diary">
+                <a href="{% url 'register:detail' diary.pk %}">
+                    <h2 class="diary-title" style="color: black;">{{ diary.title }}</h2>
+                    <p  class="meta">
+                        <time style="color:black" datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
+                        
+                    </p>
+                    <div class="contents">
+                        <p style="color: black;">
+                            {{ diary.text | truncatechars:100 }}
+                        </p>
+                    </div>
+                    
+                </a>
+                <a class="edit" href="{% url 'register:edit' diary.pk %}">この記事を編集する
+                </a>
+            </article>
+
+
+        {% empty %}
+            <p>記事が見つかりませんでした。</p>
+
+        
+        {% endfor %}
+
+        
+
+    </section>
+
+{% endblock %}

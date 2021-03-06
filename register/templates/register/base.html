@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'register/style/index.css'%}" />
+    <link rel="stylesheet" href="{% static 'register/style/index-res.css'%}" />
+    <link rel="stylesheet" href="{% static 'register/style/text.css'%}" />
+
+  
+    <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+<header id="luxbar" class="luxbar-fixed">
+  <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
+  <div class="luxbar-menu luxbar-menu-right luxbar-menu-material-indigo">
+    <ul class="luxbar-navigation">
+      <li class="luxbar-header">
+        <a href="{% url 'register:top' %}" class="luxbar-brand"
+          ><h1 class="logo">Img To Note</h1></a
+        >
+        <label
+          class="luxbar-hamburger luxbar-hamburger-doublespin"
+          id="luxbar-hamburger"
+          for="luxbar-checkbox"
+        >
+          <span></span>
+        </label>
+      </li>
+      <li class="luxbar-item"><a href="{% url 'register:Img_To_Note' %}">テキスト抽出</a></li>
+      {% if user.is_authenticated %}
+      <li class="luxbar-item"><a href="{% url 'register:list' %}">your Note</a></li>
+      <li class="luxbar-item"><a href="{% url 'register:user_update' user.pk %}">ユーザー情報</a></li>
+      <li class="luxbar-item"><a href="{% url 'register:logout' %}">ログアウト</a></li>
+      {% else %}
+          <li class="luxbar-item">
+            <a href="{% url 'register:login' %}">
+            ようこそ、ゲスト！ログインはこちら
+          </a>
+          </li>
+      {% endif %}
+
+    </ul>
+  </div>
+</header>
+    <!-- メインコンテント -->
+      <main>{% block content %}{% endblock %}</main>
+
+      <footer>
+        <small>&copy;Img To Note,inc</small>
+    </footer>
+</body>
+</html>

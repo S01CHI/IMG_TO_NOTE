@@ -1,0 +1,92 @@
+{% extends "register/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="hero-bg"></div>
+    <img class="hero-img" src="{% static 'register/img/r0745.png'%}" alt="" />
+   
+    <div class="hero-contents">
+      <h1 class="hero-title">
+          Img To Note<br /><span>お手軽に画像から文章を抽出できる</span>
+        </h1>
+        <button type="submit"><a href="{% url 'register:Img_To_Note' %}">使ってみる</a></button>
+    </div>
+
+  </div>
+  <main>
+    <article>
+      <section class="about" id="about">
+        <h2 class="main-title about-title">Img To Noteって？？</h2>
+        <div class="about-contents">
+          <div class="about-img-wrapper">
+            <div class="about-before">
+              <div class="about-before-img">
+                <img src="{% static 'register/img/r0688.png'%}" alt="" />
+                <img class="about-img-men" src="{% static 'register/img/r0689.png'%}" alt="" />
+              </div>
+              <p class="about-text">スマホやパソコンの画像を選択</p>
+            </div>
+            <div class="about-center">
+              <img src="{% static 'register/img/r0603.png'%}" alt="" />
+            </div>
+            <div class="about-after">
+              <div class="about-after-img">
+                <img src="{% static 'register/img/r0319.png'%}" alt="" />
+              </div>
+              <p class="about-text">画像から文章を抽出</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="use" id="use">
+        <h2 class="main-title use-title">どうやって使うの？？</h2>
+        <div class="use-contents">
+          <div class="use-item">
+            <div class="use-img">
+              <img src="{% static 'register/img/r0691.png'%}" alt="" />
+            </div>
+            <div class="use-text">
+              <p class="use-number">01.</p>
+              <p>データにしたい文章をカメラで撮影</p>
+            </div>
+          </div>
+          <div class="use-item">
+            <div class="use-img">
+              <img src="{% static 'register/img/r0605.png'%}" alt="" />
+            </div>
+            <div class="use-text">
+              <p class="use-number">02.</p>
+              <p>写真をImg To Noteに取り込む</p>
+            </div>
+          </div>
+          <div class="use-item">
+            <div class="use-img">
+              <img src="{% static 'register/img/r0582.png'%}" alt="" />
+            </div>
+            <div class="use-text">
+              <p class="use-number">03.</p>
+              <p>画像の中の文章がデータで抽出</p>
+            </div>
+          </div>
+          <div class="use-item">
+              <div class="use-img">
+                <img src="{% static 'register/img/r0751.png'%}" alt="" />
+              </div>
+              <div class="use-text">
+                <p class="use-number">04.</p>
+                <p>Your Noteにてデータを保管して<br>いつでも使える</p>
+                <p class="precautionary">※この機能は登録ユーザー限定</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="register" id="register">
+          <p class="register-title">Img To Noteを使ってみませんか？？</p>
+          <button type="submit"><a href="{% url 'register:user_create' %}">新規登録</a></button>
+      </section>
+    </article>
+
+{% endblock %}

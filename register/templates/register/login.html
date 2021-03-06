@@ -1,0 +1,42 @@
+{% extends "register/base.html" %}
+{% block content %}
+<div class="blank"></div>
+<div class="blank"></div>
+
+<div class="row">
+    <!-- 左側、ログインエリア -->
+    <div class="card col-md-6" >
+        <div class="card-body">
+            <form action="{% url 'register:login' %}" method="POST">
+                <table class="table" style="width: 100%;">
+                    <tbody style="width: 100%;">
+                        {% for field in form %}
+                            <tr>
+                                <th><label for="{{ field.id_for_label }}">{{ field.label }}</label></th>
+                                <td>{{ field }} {{ field.errors }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-success btn-lg btn-block" >ログイン</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% csrf_token %}
+            </form>
+        </div>
+    </div><!-- 左側、ログインエリアおわり -->
+    <div class="space"></div>
+    <hr>
+    <div class="space"></div>
+    <!-- 右側、会員登録エリア -->
+    <div class="row">
+        <div class="card-body">
+            <button type="submit">
+            <a href="{% url 'register:user_create' %}" class="btn btn-success btn-lg btn-block" >会員登録</a>
+            </button>
+            <button type="submit">
+            <a href="{% url 'register:password_reset' %}" class="btn btn-success btn-lg btn-block" >パスワードを忘れた方</a>
+            </button>
+        </div>
+    </div><!-- 右側、会員登録エリアおわり -->
+</div>
+{% endblock %}

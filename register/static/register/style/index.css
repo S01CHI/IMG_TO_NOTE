@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #ce5953;
+}
+
+li {
+  list-style: none;
+}
+/* button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+} */
+button[type="submit"],
+button[type="button"],
+input[type="submit"] {
+  display: block;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 0.7rem 2rem;
+  margin: 3rem auto 0;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #ce5953;
+}
+/*header*/
+header {
+  height: 5vh;
+}
+
+.logo {
+  font-size: 1.5vw;
+  color: #ce5953;
+}
+
+.luxbar-menu-material-indigo,
+.luxbar-menu-material-indigo .dropdown ul {
+  background-color: #fff;
+  color: #000;
+}
+.luxbar-menu-material-indigo .luxbar-hamburger span,
+.luxbar-menu-material-indigo .luxbar-hamburger span::before,
+.luxbar-menu-material-indigo .luxbar-hamburger span::after {
+  background-color: #000;
+}
+.luxbar-menu-material-indigo .active,
+.luxbar-menu-material-indigo .luxbar-item:hover {
+  background-color: #f3f3f3;
+}
+
+/*hero*/
+
+.hero {
+  width: 95vw;
+  height: 100vh;
+  position: relative;
+}
+.hero-contents {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  z-index: 10;
+  transform: translateY(-40%);
+}
+.hero-title {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+}
+.hero-title span {
+  font-size: 2vw;
+}
+
+.hero-img {
+  display: inline-block;
+  width: 45vw;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: -1;
+}
+.hero-bg {
+  width: 80%;
+  height: 100vh;
+  background-color: #ce5953;
+  clip-path: polygon(58% 1%, 100% 0%, 100% 100%, 17% 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*main共通*/
+section {
+  padding-top: 12vw;
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2vw;
+  position: relative;
+}
+.main-title::after {
+  content: "";
+  width: 10vw;
+  height: 3px;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #9f4b0f;
+}
+.main-title::before {
+  display: block;
+  font-size: 8vw;
+  font-weight: bold;
+  color: #caa865;
+  opacity: 0.15;
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+/*about*/
+.about-title::before {
+  content: "ABOUT";
+}
+.about-contents {
+  width: 70%;
+  margin: 5rem auto 0;
+}
+.about-img-wrapper {
+  display: flex;
+}
+
+.about-before {
+  width: 40%;
+}
+.about-before-img {
+  position: relative;
+  margin-left: 3vw;
+}
+.about-before-img img {
+  display: block;
+  width: 15vw;
+}
+.about-img-men {
+  margin-left: auto;
+}
+
+.about-center {
+  width: 20%;
+  position: relative;
+}
+.about-center img {
+  display: block;
+  width: 10vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about-after {
+  width: 40%;
+}
+.about-after-img {
+}
+.about-after-img img {
+  display: block;
+  width: 30vw;
+}
+.about-text {
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/*use*/
+.use-title:before {
+  content: "HOW TO USE";
+}
+
+.use-contents {
+  width: 60%;
+  margin: 5rem auto 0;
+}
+.use-item {
+  display: flex;
+  margin: 1rem 0;
+}
+.use-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.use-img,
+.use-text {
+  padding: 1rem;
+}
+.use-img {
+  width: 40%;
+}
+.use-text {
+  width: 60%;
+}
+
+.use-img img {
+  display: block;
+  width: 80%;
+  min-width: 12rem;
+}
+
+.use-text p {
+  font-size: 2vw;
+  font-weight: bold;
+}
+.use-text .use-number {
+  font-size: 4vw;
+  color: #ce5953;
+  padding-top: 4vw;
+}
+.use-text .precautionary {
+  font-size: 1vw;
+  font-weight: normal;
+  padding: 0.5vw 0;
+}
+
+/*.register*/
+.register-title {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ce5953;
+}
+
+/*footer*/
+footer {
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+form {
+  margin-top: 7vh;
+  text-align: center;
+  font-size: larger;
+}
+
+article.list {
+  text-decoration: none !important;
+  transition: 0.3s;
+  border: solid 1.5px #ce5953;
+  margin-bottom: 1rem;
+}
+article.list:hover {
+  transform: scale(1.1);
+}
+article.list > a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+article.list > a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  #diary-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    column-gap: 32px;
+  }
+
+  #diary-list > * {
+    grid-column: 1/-1;
+  }
+
+  #diary-list > article {
+    grid-column: auto;
+  }
+}
+
+/* メインコンテンツ PC */
+@media (min-width: 1366px) {
+  #diary-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* Youtube埋め込み動画用 */
+iframe {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* .backを追加 */
+.section-title,
+.back {
+  font-weight: 300;
+  font-size: 16px;
+  padding: 16px 0;
+}
+
+@media (min-width: 1024px) {
+  #diary-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    column-gap: 32px;
+  }
+
+  #diary-list > * {
+    grid-column: 1/-1;
+  }
+
+  #diary-list > article {
+    grid-column: auto;
+  }
+
+  /* これを追加 */
+  #diary-detail {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+.container {
+  width: 100%;
+}
+
+#diary-list {
+  margin-top: 0;
+}
+h1.section-title {
+  font-size: xx-large;
+}
+input {
+  width: 80%;
+  height: 5vh;
+}
+.text-main {
+  margin-top: 3rem;
+}
+.btn-wrap {
+  justify-content: space-evenly;
+  width: 100%;
+}
+article.list {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+article.diary {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+button.search {
+  margin-bottom: 1rem;
+}
+a.edit {
+  transition: 0.3s;
+}
+a.edit:hover {
+  text-decoration: underline #ce5953;
+}
+.row {
+  width: 100%;
+}
+.space {
+  margin-top: 10vh;
+}
+.blank {
+  margin-top: 20vh;
+}
+tbody {
+  width: 100%;
+}
+#text {
+  width: 50%;
+}
+textarea {
+  width: 70vw;
+  height: 30vh;
+}
+main {
+  margin: 0 10vw;
+}

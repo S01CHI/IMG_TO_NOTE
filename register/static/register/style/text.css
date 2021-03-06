@@ -1,0 +1,46 @@
+.text-main article {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-title {
+  font-size: 2rem;
+  padding: 2rem 0;
+  color: #ce5953;
+}
+.text-img-btn {
+}
+
+.convert-box {
+  width: 80%;
+  height: 30vh;
+  border: 1px solid #000;
+  margin-top: 3rem;
+}
+.btn-wrap {
+  display: flex;
+  width: 80%;
+  /* margin: 0 auto; */
+}
+.btn-wrap button {
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+@media (max-width: 900px) {
+  .text-title {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 576px) {
+  .text-title {
+    font-size: 4.5vw;
+  }
+}
+@media (max-width: 380px) {
+    .btn-wrap button {
+        font-size: 0.6rem;
+      }
+  }

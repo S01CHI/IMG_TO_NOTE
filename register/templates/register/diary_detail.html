@@ -1,0 +1,22 @@
+{% extends 'register/base.html' %}
+{% load diary_tags %}
+{% block meta_title %}{{ diary.title }} - {{ block.super }}{% endblock %}
+{% block meta_description %}{% endblock %}
+
+{% block content %}
+
+    <section id="diary-detail" class="container" style="width: 80vw; text-align: center;">
+        <nav class="back"><a href="{% get_return_link request %}">戻る</a></nav>
+        <article class="diary">
+            <h1 class="diary-title">{{ diary.title }}</h1>
+            <p class="meta">
+                <time datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
+                -
+            </p>
+            <div class="contents text-left" style="margin-top: 5rem;">
+                {{ diary.text | linebreaks | urlize2 }}
+            </div>
+            <a href="{% url 'register:edit' diary.pk %}">編集</a>
+        </article>
+    </section>
+{% endblock %}
