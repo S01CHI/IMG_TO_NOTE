@@ -1,4 +1,1 @@
-web:gunicorn
-project.wsgi
---log-file
--
+web: gunicorn IMG_TO_NOTE.wsgi --log-file-
