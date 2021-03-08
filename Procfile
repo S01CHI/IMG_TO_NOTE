@@ -1,1 +1,1 @@
-web: gunicorn IMG_TO_NOTE.wsgi
+web: gunicorn project.wsgi
