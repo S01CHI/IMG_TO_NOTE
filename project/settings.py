@@ -75,6 +75,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
     'default': {
@@ -85,7 +86,6 @@ DATABASES = {
 db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
-# import dj_database_url
 # DATABASES['default'] = dj_database_url.config()
 
 # from socket import gethostname
