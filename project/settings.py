@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=japbnl&5^p%b$)(d!2%n@g9zwj^6mp3&o&d+u#37j2!))ebv0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
@@ -77,14 +77,30 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 import dj_database_url
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER':'postgres',
+#         'PASSWORD':'suzukisuzup0907',
+#         'HOST':'localhost',
+#         'PORT':'5432',
+
+#     }
+# }
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_app',
+        'USER': 'postgres',
+        'PASSWORD' : 'suzukisuzup0907',
+        'HOST' : 'localhost',
+        'PORT' : 5432,
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update(db_from_env)
 
 # DATABASES['default'] = dj_database_url.config()
 
