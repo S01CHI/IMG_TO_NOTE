@@ -1,1 +1,2 @@
 *.pyc
+!__init__.cpython-37.pyc
