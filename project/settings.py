@@ -90,41 +90,41 @@ import dj_database_url
 # }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_app',
-        'USER': 'postgres',
-        'PASSWORD' : 'suzukisuzup0907',
-        'HOST' : 'localhost',
-        'PORT' : 5432,
-    }
-}
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'django_app',
+#         'USER': 'postgres',
+#         'PASSWORD' : 'suzukisuzup0907',
+#         'HOST' : 'localhost',
+#         'PORT' : 5432,
+#     }
+# }
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 # DATABASES['default'] = dj_database_url.config()
 
-# from socket import gethostname
-# hostname = gethostname()
+from socket import gethostname
+hostname = gethostname()
 
-# if "DESKTOP-BVUDD9B" in hostname:
-#     # デバッグ環境
-#     # DEBUG = True 
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
-# else:
-#     # 本番環境
-#     # DEBUG = False
-#     import dj_database_url
-#     db_from_env = dj_database_url.config()
-#     DATABASES = {
-#         'default': dj_database_url.config()
-#     }
+if "DESKTOP-BVUDD9B" in hostname:
+    # デバッグ環境
+    # DEBUG = True 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    # 本番環境
+    # DEBUG = False
+    import dj_database_url
+    db_from_env = dj_database_url.config()
+    DATABASES = {
+        'default': dj_database_url.config()
+    }
 
 
 # Password validation
