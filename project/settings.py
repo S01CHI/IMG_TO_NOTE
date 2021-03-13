@@ -90,15 +90,7 @@ import dj_database_url
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'django_app',
-#         'USER': 'postgres',
-#         'PASSWORD' : 'suzukisuzup0907',
-#         'HOST' : 'localhost',
-#         'PORT' : 5432,
-#     }
+
 # }
 # db_from_env = dj_database_url.config()
 # DATABASES['default'].update(db_from_env)
@@ -112,10 +104,14 @@ if "DESKTOP-BVUDD9B" in hostname:
     # デバッグ環境
     # DEBUG = True 
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_app',
+        'USER': 'postgres',
+        'PASSWORD' : 'suzukisuzup0907',
+        'HOST' : 'localhost',
+        'PORT' : 5432,
+    }
     }
 else:
     # 本番環境
