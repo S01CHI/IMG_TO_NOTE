@@ -47,7 +47,8 @@
   .hero-title span {
     font-size: 1.5rem;
   }
-  button[type="submit"] {
+  button[type="submit"],
+  button[type="button"] {
     font-size: 1rem;
   }
 
@@ -89,6 +90,9 @@
   .about-after-img img {
     margin: 0 auto;
     width: 16rem;
+  }
+  .hero-img {
+    margin-top: -5rem;
   }
 
   /*use*/
@@ -147,14 +151,19 @@
   .hero-title {
     font-size: 10vw;
   }
+  th {
+    display: block;
+  }
+  td {
+    display: block;
+  }
   .hero-title span {
     font-size: 5vw;
   }
   button[type="submit"] {
     font-size: 1rem;
   }
-  .hero-img {
-  }
+
   .about-contents {
     width: 80%;
   }
@@ -183,6 +192,23 @@
   }
   section {
     padding-top: 8rem;
+  }
+  .br-sm {
+    display: block;
+  }
+  .br-pc {
+    display: none;
+  }
+
+  th,
+  td {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  form {
+    margin: 0;
   }
 
   /*use*/

@@ -12,6 +12,7 @@
                 {% for field in form %}
                     <tr>
                         <th><label for="{{ field.id_for_label }}">{{ field.label }}</label></th>
+                        <div class="space"></div>
                         <td>{{ field }} {{ field.errors }}</td>
                     </tr>
                     <div class="space"></div>
@@ -20,9 +21,8 @@
         </table>
         {% csrf_token %}
         <div class="btn-wrap">
-        <button class="btn btn-primary" type="submit">送信</button>
-        <button class="btn btn-primary" type="submit" name="save_and_add">保存してもう一つ追加</button>
-        <button class="btn btn-primary" type="submit" name="save_and_edit">保存して編集を続ける</button>
+        <button class="btn btn-primary" type="submit" name="save_and_add">New</button>
+        <button class="btn btn-primary" type="submit" name="save_and_edit">Save</button>
     </div>
     </form>
 

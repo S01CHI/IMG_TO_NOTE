@@ -8,7 +8,7 @@
 <div class="blank"></div>
 <script src="{% static 'register/js/copyUseJavaScript.js'%}" type="text/javascript"></script>
 
-<main class="text-main">
+
     <article>
     <h2 class="text-title">さぁ、画像からテキストを抽出してみよう！</h2>
 
@@ -27,25 +27,28 @@
         
         <form action="{% url 'register:diary_created' %}" method="POST">
         {% if user.is_authenticated %}
-        <div><p>日記制作時のタイトル</p><input type="text" name="title"></div>
+        <div><h5>ノートのタイトル</ｈ><input type="text" name="title"></div>
         <br>
+        <h5>本文</h5>
         {% endif %}
         <textarea id="copyTarget" name="text" cols="30" rows="10">{{ response_str }}</textarea>
         {% if user.is_authenticated %}
         <button type="submit" name="create">
-        Create Note</button>
+        Create</button>
         {% csrf_token %}
         {% endif %}
+        <button type="button" id="copy"  onclick="onClickCopy()">Copy</button>
+
 
         </form>
 
-        <button type="button" id="copy"  onclick="onClickCopy()">Copy</button>
+        
 
         
 
 
     </article>
     <div class="blank"></div>
-</main>
+
 
 {% endblock %}

@@ -62,7 +62,7 @@ header {
 /*hero*/
 
 .hero {
-  width: 95vw;
+  width: 100vw;
   height: 100vh;
   position: relative;
 }
@@ -104,6 +104,7 @@ header {
 section {
   padding-top: 12vw;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 .main-title {
@@ -265,7 +266,7 @@ article.list {
   margin-bottom: 1rem;
 }
 article.list:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 article.list > a {
   text-decoration: none;
@@ -398,6 +399,28 @@ textarea {
   width: 70vw;
   height: 30vh;
 }
+.br-sm {
+  display: none;
+}
+.br-pc {
+  display: block;
+}
+
+form,
+textarea {
+  padding: 1rem;
+}
+h2 {
+  justify-self: center;
+}
+img {
+  display: block;
+}
+article.list > a > div.diary-title-wrapper {
+  display: block;
+  text-align: center;
+}
+
 main {
-  margin: 0 10vw;
+  margin-bottom: 5rem;
 }

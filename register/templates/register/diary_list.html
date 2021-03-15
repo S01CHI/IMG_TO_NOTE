@@ -11,20 +11,24 @@
         <h1 class="section-title">{{ heading }}</h1>
 
         <form action="" method="get" >
-            <p>タイトルやコンテンツを入力して検索：</p>
+            <p>Key Words Search:</p>
             <input name="query" value="{{ request.GET.query }}" type="text">
             <button type="submit" class="search">検索する</button>
         </form>
         <article class="list" >
         <a href="create">
+            <div class="diary-title-wrapper">
             <h2 style="color:black">Create</h2>
+        </div>
             <p style="color:black">新しいノートに書き残す</p>
         </a>
         </article>
         {% for diary in object_list %}
             <article class="list" class="diary">
                 <a href="{% url 'register:detail' diary.pk %}">
+                    <div class="diary-title-wrapper">
                     <h2 class="diary-title" style="color: black;">{{ diary.title }}</h2>
+                    </div>
                     <p  class="meta">
                         <time style="color:black" datetime="{{ diary.created_at | date:'Y-m-d' }}">{{ diary.created_at | date:'Y年n月j日' }}</time>
                         
