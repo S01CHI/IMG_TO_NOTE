@@ -450,6 +450,15 @@ input {
 form > input[type="text"] {
   width: 70vw;
 }
-td > input[type="text"] {
+td > input[type="text"],
+input[type="password"],
+input[type="email"] {
   width: 70vw;
+}
+.margin-vertical {
+  margin: 0 5vw;
+}
+.center {
+  width: 100%;
+  text-align: center;
 }
