@@ -446,3 +446,7 @@ article.imgtonote > form > p > input {
 input {
   width: 100%;
 }
+
+form > input[type="text"] {
+  width: 70vw;
+}
