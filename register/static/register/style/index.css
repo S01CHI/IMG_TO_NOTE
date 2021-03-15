@@ -124,12 +124,12 @@ section {
 }
 .main-title::before {
   display: block;
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: bold;
   color: #caa865;
   opacity: 0.15;
   position: absolute;
-  top: -200%;
+  top: -150%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -467,4 +467,9 @@ input[type="email"] {
 .center {
   width: 100%;
   text-align: center;
+}
+.about,
+.use,
+.register{
+  margin-top: 4rem;
 }
