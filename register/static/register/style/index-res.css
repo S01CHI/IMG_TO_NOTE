@@ -20,6 +20,10 @@
   .logo {
     font-size: 1rem;
   }
+  article.imgtonote > form > p > input {
+    margin-left: 20vw;
+  }
+
   .hero-img {
     top: 10%;
     left: 50%;
@@ -120,6 +124,13 @@
   .use-contents {
     width: 85%;
   }
+  th,
+  td {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -200,15 +211,11 @@
     display: none;
   }
 
-  th,
-  td {
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
   form {
     margin: 0;
+  }
+  article.imgtonote > form > p > input {
+    margin-left: 0;
   }
 
   /*use*/
