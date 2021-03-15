@@ -233,7 +233,7 @@ section {
   padding-top: 4vw;
 }
 .use-text .precautionary {
-  font-size: 1vw;
+  font-size: 1rem;
   font-weight: normal;
   padding: 0.5vw 0;
 }
@@ -425,8 +425,16 @@ article.imgtonote {
   text-align: center;
 }
 
+article.imgtonote > form > p {
+  width: 100%;
+}
+article.imgtonote > form > p >label{
+  width: 100%;
+  display: block;
+}
 article.imgtonote > form > p > input {
-  margin-left: 30vw;
+  width: 240px;
+  margin:  0 auto;
 }
 input[type="text"],
 input[type="email"],
@@ -440,9 +448,7 @@ form > div > input[type="text"] {
   width: 70vw;
 }
 
-article.imgtonote > form > p > input {
-  width: 100%;
-}
+
 input {
   width: 100%;
 }
