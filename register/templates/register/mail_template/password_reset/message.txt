@@ -5,4 +5,3 @@
 再設定用URL
 {{ protocol}}://{{ domain }}{% url 'register:password_reset_confirm' uid token %}
 
-ほにゃらら

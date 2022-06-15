@@ -175,7 +175,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'imgtonote@gmail.com'
-EMAIL_HOST_PASSWORD = 'noiytbexbitokxry'
+EMAIL_HOST_PASSWORD = 'aoacezedmbwovwvc'  #noiytbexbitokxry
 EMAIL_USE_TLS =True
 
 STATICFILES_DIRS = (

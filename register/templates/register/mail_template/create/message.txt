@@ -5,5 +5,3 @@
 
 本登録用URL
 {{ protocol}}://{{ domain }}{% url 'register:user_create_complete' token %}
-
-ほにゃらら

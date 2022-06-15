@@ -108,8 +108,8 @@ class OCRForm(forms.Form):
         upload_file = self.cleaned_data['file']
         read_file = upload_file.read()
 
-        subscription_key = '6cb9135981824b46abe6c886d483a2a4'
-        ocr_url = 'https://soichirosuzuki.cognitiveservices.azure.com/' + 'vision/v3.0/ocr'
+        subscription_key = '4ee202eb11a241b6a0f19bc1483c36e4'
+        ocr_url = 'https://imgtonote.cognitiveservices.azure.com/' + 'vision/v3.0/ocr'
         headers = {'Ocp-Apim-Subscription-Key': subscription_key,
                 'Content-Type': 'application/octet-stream'}
         params = {'language': 'unk', 'detectOrientation': 'true'}
