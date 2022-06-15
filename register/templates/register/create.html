@@ -1,32 +1,32 @@
-{% extends 'register/base.html' %}
-
-{% block content %}
+{% extends 'register/base.html' %} {% block content %}
 <div class="blank"></div>
 
 <div class="margin-vertical">
-    <div class="center">
-<h3>Noteを新規作成
-</h3></div>
-    <form action="" method="POST">
-        <table class="table" style="width: 100%;">
-            <tbody style="width: 100%;">
-                {% for field in form %}
-                    <tr>
-                        <th><label for="{{ field.id_for_label }}">{{ field.label }}</label></th>
-                        <div class="space"></div>
-                        <td>{{ field }} {{ field.errors }}</td>
-                    </tr>
-                    <div class="space"></div>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% csrf_token %}
-        <div class="btn-wrap">
-        <button class="btn btn-primary" type="submit" name="save_and_add">New</button>
-        <button class="btn btn-primary" type="submit" name="save_and_edit">Save</button>
+  <div class="center">
+    <h3>Noteを新規作成</h3>
+  </div>
+  <form action="" method="POST">
+    <table class="table" style="width: 100%">
+      <tbody style="width: 100%">
+        {% for field in form %}
+        <tr>
+          <th>
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          </th>
+          <div class="space"></div>
+          <td>{{ field }} {{ field.errors }}</td>
+        </tr>
+        <div class="space"></div>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% csrf_token %}
+    <div class="btn-wrap">
+      <button class="btn btn-primary" type="submit" name="save_and_add">
+        New
+      </button>
     </div>
-    </form>
-
+  </form>
 </div>
 
 {% endblock %}
