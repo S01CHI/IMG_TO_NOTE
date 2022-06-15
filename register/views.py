@@ -411,7 +411,7 @@ class DiaryCreate(generic.CreateView):
 
         # 保存してもう一つ追加ボタンのとき
         if 'save_and_add' in self.request.POST:
-            return redirect('register:create')
+            return redirect('register:list')
 
         # 保存して編集を続けるボタン
         elif 'save_and_edit' in self.request.POST:
@@ -431,7 +431,7 @@ class DiaryEdit(generic.UpdateView):
 
         # 保存してもう一つ追加ボタンのとき
         if 'save_and_add' in self.request.POST:
-            return redirect('register:create')
+            return redirect('register:list')
 
         # 保存して編集を続けるボタン
         elif 'save_and_edit' in self.request.POST:
@@ -453,7 +453,7 @@ class Diary_created(generic.CreateView):
 
         # 保存してもう一つ追加ボタンのとき
         if 'save_and_add' in self.request.POST:
-            return redirect('register:create')
+            return redirect('register:list')
 
         # 保存して編集を続けるボタン
         elif 'save_and_edit' in self.request.POST:
